@@ -1,0 +1,194 @@
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif; 
+    box-sizing: border-box;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark text color for better readability */
+    line-height: 1.6; /* Improved line height for readability */
+    font-size: 16px; /* Set base font size */
+    transition: background-color 0.2s ease;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0; /* Reset margin for all elements */
+    padding: 0; /* Reset padding for all elements */
+}
+
+a { 
+    color: #ff6347; /* Tomato color for links */
+    text-decoration: none; 
+    transition: color 0.2s ease, background-color 0.2s ease;
+    display: inline-block; /* Make links block-level elements */
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff4500; /* Orange red color on hover */
+    background-color: #f0f8ff; /* Light blue background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+    padding: 2px 5px; /* Padding on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow on hover */
+}
+
+h1 { 
+    font-weight: normal;
+    border-bottom: 2px solid #ff6347; /* Tomato color for border */
+    padding: 0 0 10px 0;
+    margin-bottom: 20px;
+    color: #ff4500; /* Orange red color for heading */
+    font-size: 36px; /* Set font size for headings */
+    font-family: 'Helvetica', sans-serif; /* Set font family for headings */
+}
+
+h2 {
+    font-weight: normal;
+    margin: 30px 0 0;
+    color: #4682b4; /* Steel blue color for subheading */
+    font-size: 24px; /* Set font size for subheadings */
+    font-family: 'Helvetica', sans-serif; /* Set font family for headings */
+}
+
+#content { 
+    float: left;
+    width: 60%;
+    padding: 20px; /* Add padding to content */
+    overflow: hidden;
+    display: flex; /* Make content container a flex container */
+    flex-direction: column; /* Set flex direction to column */
+}
+
+#sidebar { 
+    float: right;
+    width: 30%;
+    padding: 20px; /* Add padding to sidebar */
+    background: #dcdcdc; /* Gainsboro background for sidebar */
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    border-left: 3px solid #4682b4; /* Steel blue border for sidebar */
+    display: flex; /* Make sidebar a flex container */
+    flex-direction: column; /* Set flex direction to column */
+}
+
+p.date { 
+    color: #8b0000; /* Dark red color for date */
+    font-family: 'Georgia', serif;
+    font-size: 12px;
+    font-style: italic; 
+    margin-bottom: 10px;
+    display: block; /* Make date paragraph a block-level element */
+}
+
+.left {
+    float: none;
+    margin-right: 10px;
+    display: inline-block; /* Make left-aligned elements inline-block */
+}
+
+/* pagination */
+.pagination { 
+    margin: 40px 0; 
+    font-weight: bold;
+    text-align: center;
+    color: #4682b4; /* Steel blue color for pagination */
+    display: flex; /* Make pagination a flex container */
+    justify-content: center; /* Center pagination items */
+    font-size: 18px; /* Increase font size for pagination */
+}
+
+/* forms */
+label { 
+    float: left;
+    clear: both;
+    color: #333;
+    margin-bottom: 4px; 
+    display: block;
+    font-weight: bold; /* Make label text bold */
+}
+
+input, textarea { 
+    clear: both;
+    float: left;
+    margin: 0 0 10px;
+    background: #f5f5f5; /* White smoke background for input fields */
+    border: 1px solid #ccc; /* Light gray border for input fields */
+    padding: 10px; /* Increase padding for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+    transition: background 0.2s ease;
+    display: block; /* Make input fields block-level elements */
+    width: 100%; /* Set width of input fields to 100% */
+}
+
+input:focus, textarea:focus {
+    background: #e6e6fa; /* Lavender background on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow on focus */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #content {
+        width: 100%;
+        padding: 0;
+    }
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: auto;
+        border-left: none;
+    }
+}
+
+/* Accessibility */
+*:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 1s ease-in-out;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline-block */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 12px; /* Rounded corners */
+    transition-duration: 0.4s; /* Transition effects */
+}
+
+input[type="submit"]:hover {
+    background-color: white; /* White background on hover */
+    color: black; /* Black text on hover */
+    border: 2px solid #4CAF50; /* Green border on hover */
+}
+
+input[type="submit"]:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
