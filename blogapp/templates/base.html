@@ -18,9 +18,14 @@
          </div>
           <div id="sidebar"> 
         <h2>My blog</h2> 
-        <p>This is my blog.
-            welcome to our blog we have {% total_posts %} for your reading pleasure.
+        <p>
+            welcome to our blog we have {% total_posts %} post for your reading pleasure.
         </p> 
+        <p>
+            <a href="{% url "blog:post_feed" %}">         
+            Subscribe to my RSS feed         
+            </a>
+            </p>
         <h3>Latest posts</h3> 
         {% show_latest_posts 3 %}
 

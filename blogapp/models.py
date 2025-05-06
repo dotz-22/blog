@@ -10,6 +10,7 @@ from taggit.managers import TaggableManager
 class PublishedManager(models.Manager):
         def get_queryset(self):
             return ( super().get_queryset().filter(status=Post.Status.PUBLISHED) )
+             # a custom manager to retrieve all posts that have a PUBLISHED status.
 
 
 
@@ -46,8 +47,8 @@ class Post(models.Model):
     class Meta:
          ordering = ['-publish']
          indexes = [
-              models.Index(fields=['-publish']),#This option allows you to define database indexes for your model, which could comprise one or multiple fields
-                    ]
+              models.Index(fields=['-publish']),
+                    ] #This option allows you to define database indexes for your model, which could comprise one or multiple fields
 
     def __str__(self): 
        return self.title
